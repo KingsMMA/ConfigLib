@@ -170,7 +170,8 @@ public final class YamlConfigurationStore<T> implements
     static Dump newYamlDumper() {
         DumpSettings settings = DumpSettings.builder()
                 .setDefaultFlowStyle(FlowStyle.BLOCK)
-                .setIndent(2)
+                .setIndent(4)
+                .setSplitLines(false)
                 .build();
         return new Dump(settings, new YamlConfigurationRepresenter(settings));
     }

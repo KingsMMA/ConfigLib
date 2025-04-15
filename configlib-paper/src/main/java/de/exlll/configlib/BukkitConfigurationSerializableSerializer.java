@@ -14,8 +14,9 @@ final class BukkitConfigurationSerializableSerializer
 
     BukkitConfigurationSerializableSerializer() {
         DumperOptions options = new DumperOptions();
-        options.setIndent(2);
+        options.setIndent(4);
         options.setDefaultFlowStyle(DumperOptions.FlowStyle.BLOCK);
+        options.setSplitLines(false);
         this.yaml = new Yaml(new YamlConstructor(), new YamlRepresenter(), options);
     }
 

@@ -69,7 +69,7 @@ final class YamlWriter {
     }
 
     private void writeComments(List<String> comments, int indentLevel) throws IOException {
-        String indent = "  ".repeat(indentLevel);
+        String indent = "    ".repeat(indentLevel);
         for (String comment : comments) {
             if (comment.isEmpty()) {
                 writer.newLine();
@@ -117,7 +117,7 @@ final class YamlWriter {
             }
 
             final var elementNames = node.elementNames();
-            final var indent = "  ".repeat(currentIndentLevel);
+            final var indent = "    ".repeat(currentIndentLevel);
 
             final var lineStart = indent + elementNames.get(currentIndentLevel) + ":";
             if (!line.startsWith(lineStart)) {
